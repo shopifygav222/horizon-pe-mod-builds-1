@@ -1,0 +1,20 @@
+{
+  "name": "horizon-pe-mod-builds-1",
+  "private": true,
+  "type": "module",
+  "description": "Horizon PE's mod builds: starts and finds the app's builds with catalog mods (a Cloudflare Worker)",
+  "scripts": {
+    "test": "node --test worker.test.mjs",
+    "deploy": "npx wrangler deploy"
+  },
+  "cloudflare": {
+    "bindings": {
+      "GITHUB_TOKEN": {
+        "description": "The GitHub token you made in step 1 (it starts with `github_pat_`). It can start builds in your repository and nothing else."
+      },
+      "LIMITS": {
+        "description": "Counters for the daily limits. Leave it as it is: Cloudflare creates it."
+      }
+    }
+  }
+}

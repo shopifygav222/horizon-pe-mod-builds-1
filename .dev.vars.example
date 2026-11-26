@@ -1,0 +1,2 @@
+# The GitHub token that starts the builds (README.md, step 1). Never commit the real one.
+GITHUB_TOKEN=github_pat_your_token_here
